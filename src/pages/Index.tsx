@@ -36,45 +36,39 @@ const Index = () => {
     {
       icon: 'Sparkles',
       title: 'Гадание на Таро',
-      description: 'Откройте тайны прошлого, настоящего и будущего через древнюю мудрость карт Таро',
-      price: 'от 3000 ₽'
+      description: 'Откройте тайны прошлого, настоящего и будущего через древнюю мудрость карт Таро'
     },
     {
       icon: 'Flame',
       title: 'Руническое гадание',
-      description: 'Скандинавские руны раскроют скрытые пути и дадут ответы на важные вопросы',
-      price: 'от 2500 ₽'
+      description: 'Скандинавские руны раскроют скрытые пути и дадут ответы на важные вопросы'
     },
     {
       icon: 'Star',
       title: 'Астрология',
-      description: 'Индивидуальный астрологический прогноз и анализ влияния планет на вашу судьбу',
-      price: 'от 5000 ₽'
+      description: 'Индивидуальный астрологический прогноз и анализ влияния планет на вашу судьбу'
     },
     {
       icon: 'Moon',
       title: 'Натальная карта',
-      description: 'Полный разбор вашей натальной карты с рекомендациями по жизненному пути',
-      price: 'от 7000 ₽'
+      description: 'Полный разбор вашей натальной карты с рекомендациями по жизненному пути'
     },
     {
       icon: 'Heart',
       title: 'Любовная магия',
-      description: 'Привороты, обряды на привлечение любви и укрепление отношений',
-      price: 'от 10000 ₽'
+      description: 'Привороты, обряды на привлечение любви и укрепление отношений'
     },
     {
       icon: 'Eye',
       title: 'Ясновидение',
-      description: 'Сеанс ясновидения для получения ответов на самые важные вопросы',
-      price: 'от 4000 ₽'
+      description: 'Сеанс ясновидения для получения ответов на самые важные вопросы'
     }
   ];
 
   const reviews = [
     {
       name: 'Елена М.',
-      text: 'Удивительная точность! Всё, что предсказала Мария, сбылось в точности. Рекомендую всем!',
+      text: 'Удивительная точность! Всё, что предсказала Екатерина, сбылось в точности. Рекомендую всем!',
       rating: 5
     },
     {
@@ -95,7 +89,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Icon name="Sparkles" className="text-primary" size={28} />
-            <span className="text-2xl font-cormorant font-bold">Мария Таролог</span>
+            <span className="text-2xl font-cormorant font-bold">Екатерина Ясновидящая</span>
           </div>
           <div className="hidden md:flex gap-6">
             <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
@@ -161,7 +155,6 @@ const Index = () => {
                   <CardDescription className="text-center">{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-2xl font-bold text-accent mb-4">{service.price}</p>
                   <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
                     Заказать
                   </Button>
@@ -335,7 +328,7 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Icon name="Sparkles" className="text-primary" size={24} />
-            <span className="text-xl font-cormorant font-bold">Мария Таролог</span>
+            <span className="text-xl font-cormorant font-bold">Екатерина Ясновидящая</span>
           </div>
           <p className="text-muted-foreground mb-4">
             Профессиональные эзотерические услуги с 2010 года
