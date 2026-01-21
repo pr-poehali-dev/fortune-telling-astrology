@@ -13,6 +13,7 @@ const Index = () => {
   });
 
   const [natalResult, setNatalResult] = useState('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const calculateNatalChart = () => {
     if (!birthData.date || !birthData.time) {
@@ -97,10 +98,60 @@ const Index = () => {
             <a href="#reviews" className="hover:text-primary transition-colors">Отзывы</a>
             <a href="#contact" className="hover:text-primary transition-colors">Контакты</a>
           </div>
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Записаться
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground">
+              Записаться
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="icon"
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
+            </Button>
+          </div>
         </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border animate-fade-in">
+            <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+              <a 
+                href="#services" 
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Услуги
+              </a>
+              <a 
+                href="#natal" 
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Натальная карта
+              </a>
+              <a 
+                href="#reviews" 
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Отзывы
+              </a>
+              <a 
+                href="#contact" 
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Контакты
+              </a>
+              <Button 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Записаться
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
